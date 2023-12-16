@@ -12,7 +12,7 @@
     <Folder Include="Tables" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Enterprise.Db_1.publish.xml" />
+    <None Include="PublishScripts\dockerContainerPublish.xml" />
     <None Include="SchemaCompares/localDb.scmp" />
   </ItemGroup>
   <Target Name="BeforeBuild">

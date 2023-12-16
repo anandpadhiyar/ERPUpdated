@@ -2,13 +2,16 @@
 <SchemaComparison>
   <Version>10</Version>
   <SourceModelProvider>
-    <ConnectionBasedModelProvider>
-      <ConnectionString>Data Source=localhost;Initial Catalog=Enterprise.Db;User ID=sa;Connect Timeout=30;Encrypt=True;Trust Server Certificate=True;Authentication=SqlPassword;Application Name=azdata;Command Timeout=30</ConnectionString>
-    </ConnectionBasedModelProvider>
+    <ProjectBasedModelProvider>
+      <ProjectFilePath>/Users/anandpadhiyar/programming/dotnet/EnterpriseSolution/EnterpriseSolution/Enterprise.Db/Enterprise.Db.sqlproj</ProjectFilePath>
+      <TargetScripts>[/Users/anandpadhiyar/programming/dotnet/EnterpriseSolution/EnterpriseSolution/Enterprise.Db/Tables/tblAddresses.sql,/Users/anandpadhiyar/programming/dotnet/EnterpriseSolution/EnterpriseSolution/Enterprise.Db/Tables/tblCountries.sql,/Users/anandpadhiyar/programming/dotnet/EnterpriseSolution/EnterpriseSolution/Enterprise.Db/Tables/tblCustomer.sql,/Users/anandpadhiyar/programming/dotnet/EnterpriseSolution/EnterpriseSolution/Enterprise.Db/Tables/tblCustomerOrders.sql,/Users/anandpadhiyar/programming/dotnet/EnterpriseSolution/EnterpriseSolution/Enterprise.Db/Tables/tblOrderItems.sql,/Users/anandpadhiyar/programming/dotnet/EnterpriseSolution/EnterpriseSolution/Enterprise.Db/Tables/tblProductPrices.sql,/Users/anandpadhiyar/programming/dotnet/EnterpriseSolution/EnterpriseSolution/Enterprise.Db/Tables/tblProducts.sql,/Users/anandpadhiyar/programming/dotnet/EnterpriseSolution/EnterpriseSolution/Enterprise.Db/Tables/tblShopProducts.sql,/Users/anandpadhiyar/programming/dotnet/EnterpriseSolution/EnterpriseSolution/Enterprise.Db/Tables/tblShops.sql,/Users/anandpadhiyar/programming/dotnet/EnterpriseSolution/EnterpriseSolution/Enterprise.Db/Tables/tblStates.sql]</TargetScripts>
+      <Dsp>160</Dsp>
+      <FolderStructure>SchemaObjectType</FolderStructure>
+    </ProjectBasedModelProvider>
   </SourceModelProvider>
   <TargetModelProvider>
     <ConnectionBasedModelProvider>
-      <ConnectionString>Data Source=localhost;Initial Catalog=Enterprise.Db;User ID=sa;Connect Timeout=30;Encrypt=True;Trust Server Certificate=True;Authentication=SqlPassword;Application Name=azdata;Command Timeout=30</ConnectionString>
+      <ConnectionString>Data Source="localhost, 1401";Initial Catalog=Enterprise;User ID=sa;Multiple Active Result Sets=True;Connect Timeout=30;Encrypt=True;Trust Server Certificate=True;Authentication=SqlPassword;Application Name=azdata;Connect Retry Count=1;Connect Retry Interval=10;Command Timeout=30</ConnectionString>
     </ConnectionBasedModelProvider>
   </TargetModelProvider>
   <SchemaCompareSettingsService>
@@ -341,7 +344,7 @@
       </PropertyElementName>
       <PropertyElementName>
         <Name>TargetDatabaseName</Name>
-        <Value>Enterprise.Db</Value>
+        <Value>Enterprise</Value>
       </PropertyElementName>
       <PropertyElementName>
         <Name>TargetConnectionString</Name>
