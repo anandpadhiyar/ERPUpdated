@@ -1,0 +1,29 @@
+version: '3.4'
+
+services:
+  enterprise.database:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: enterprise.database
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=Passw0rd!
+      - MSSQL_DB_NAME=EnterpriseDb
+    volumes:
+      - ./containers/enterprise-database:/var/opt/mssql
+    ports:
+      - "1433:1433"
+      
+  enterprise.api:
+    image: ${DOCKER_REGISTRY-}enterpriseapi
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_HTTP_PORTS=5001
+      - ASPNETCORE_HTTP_PORTS=5002
+    ports:
+      - "5001:5001"
+      - "5002:5002"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - enterprise.database
